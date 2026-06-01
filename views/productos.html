@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/animations.css">
 </head>
 <body>
+    <div class="algo">
 
     <header class="main-header">
         <div class="logo"><a href="../index.html">EcoMarket</a></div>
@@ -29,44 +30,36 @@
 
     <div class="catalog-container container">
         
+        <input type="checkbox" id="f-hogar" class="filter-switch">
+        <input type="checkbox" id="f-moda" class="filter-switch">
+        <input type="checkbox" id="f-cuidado" class="filter-switch">
+        <input type="checkbox" id="f-alimentos" class="filter-switch">
+        <input type="radio" id="f-all" name="stock-filter" class="filter-switch" checked>
+        <input type="radio" id="f-instock" name="stock-filter" class="filter-switch">
+        
         <aside class="sidebar-filters">
             <h3>Filtrar Por</h3>
             <form class="filter-form">
                 <div class="filter-group">
                     <h4>Categorías</h4>
-                    <label><input type="checkbox" name="category" value="hogar"> Hogar</label>
-                    <label><input type="checkbox" name="category" value="moda"> Moda</label>
-                    <label><input type="checkbox" name="category" value="cuidado"> Cuidado Personal</label>
-                    <label><input type="checkbox" name="category" value="alimentos"> Alimentos</label>
+                    <label for="f-hogar" class="lbl-filter"> Hogar</label>
+                    <label for="f-moda" class="lbl-filter"> Moda</label>
+                    <label for="f-cuidado" class="lbl-filter"> Cuidado Personal</label>
+                    <label for="f-alimentos" class="lbl-filter"> Alimentos</label>
                 </div>
                 
                 <div class="filter-group">
-                    <h4>Rango de Precio</h4>
-                    <input type="range" id="price-range" name="price" min="0" max="100">
-                    <div class="price-labels">
-                        <span>$0</span> - <span>$100</span>
-                    </div>
-                </div>
-
-                <div class="filter-group">
                     <h4>Disponibilidad</h4>
-                    <label><input type="radio" name="stock" value="all" checked> Todos</label>
-                    <label><input type="radio" name="stock" value="in-stock"> En Stock</label>
+                    <label for="f-all" class="lbl-filter"> Todos</label>
+                    <label for="f-instock" class="lbl-filter"> En Stock</label>
                 </div>
             </form>
         </aside>
 
         <main class="catalog-main">
-            <section class="search-bar-section">
-                <form class="search-form">
-                    <input type="search" placeholder="Buscar productos sustentables..." aria-label="Buscar">
-                    <button type="submit" class="btn btn-search">Buscar</button>
-                </form>
-            </section>
-
             <section class="products-catalog-grid">
                 
-                <article class="catalog-card" id="prod-1">
+                <article class="catalog-card p-cuidado p-instock" id="prod-1">
                     <div class="card-badge in-stock">En Stock</div>
                     <div class="card-image">
                         <img src="../img/products/p1.jpg" alt="Producto Eco 1">
@@ -81,14 +74,14 @@
                     </div>
                 </article>
 
-                <article class="catalog-card" id="prod-2">
+                <article class="catalog-card p-hogar p-outstock" id="prod-2">
                     <div class="card-badge out-of-stock">Agotado</div>
                     <div class="card-image">
                         <img src="../img/products/p2.jpg" alt="Producto Eco 2">
                     </div>
                     <div class="card-info">
-                        <h3>Copa Menstrual de Silicona</h3>
-                        <p class="product-price">$25.00</p>
+                        <h3>Cajas reutilisables</h3>
+                        <p class="product-price">$5.00</p>
                         <div class="card-actions">
                             <a href="#prod-2" class="btn-fav" title="Añadir a Favoritos">❤</a>
                             <button class="btn btn-add-cart" disabled>Agotado</button>
@@ -96,21 +89,164 @@
                     </div>
                 </article>
 
-                </section>
+                <article class="catalog-card p-moda p-instock" id="prod-3">
+                    <div class="card-badge in-stock">En Stock</div>
+                    <div class="card-image">
+                        <img src="../img/products/p3.jpg" alt="Camiseta Algodón Orgánico">
+                    </div>
+                    <div class="card-info">
+                        <h3>Camiseta de Algodón Orgánico</h3>
+                        <p class="product-price">$25.00</p>
+                        <div class="card-actions">
+                            <a href="#prod-3" class="btn-fav" title="Añadir a Favoritos">❤</a>
+                            <button class="btn btn-add-cart">Añadir</button>
+                        </div>
+                    </div>
+                </article>
 
-            <nav class="pagination" aria-label="Paginación de productos">
-                <a href="#" class="page-control prev disabled">Anterior</a>
-                <a href="#" class="page-number active">1</a>
-                <a href="#" class="page-number">2</a>
-                <a href="#" class="page-number">3</a>
-                <a href="#" class="page-control next">Siguiente</a>
-            </nav>
+                <article class="catalog-card p-alimentos p-instock" id="prod-4">
+                    <div class="card-badge in-stock">En Stock</div>
+                    <div class="card-image">
+                        <img src="../img/products/p4.jpg" alt="Café Orgánico">
+                    </div>
+                    <div class="card-info">
+                        <h3>Café Orgánico de Altura</h3>
+                        <p class="product-price">$18.90</p>
+                        <div class="card-actions">
+                            <a href="#prod-4" class="btn-fav" title="Añadir a Favoritos">❤</a>
+                            <button class="btn btn-add-cart">Añadir</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="catalog-card p-hogar p-instock" id="prod-5">
+                    <div class="card-badge in-stock">En Stock</div>
+                    <div class="card-image">
+                        <img src="../img/products/p5.jpg" alt="Botella de Acero Inoxidable">
+                    </div>
+                    <div class="card-info">
+                        <h3>Botella Térmica de Acero</h3>
+                        <p class="product-price">$15.00</p>
+                        <div class="card-actions">
+                            <a href="#prod-5" class="btn-fav" title="Añadir a Favoritos">❤</a>
+                            <button class="btn btn-add-cart">Añadir</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="catalog-card p-cuidado p-outstock" id="prod-6">
+                    <div class="card-badge out-of-stock">Agotado</div>
+                    <div class="card-image">
+                        <img src="../img/products/p6.jpg" alt="Cepillo de Dientes Bambú">
+                    </div>
+                    <div class="card-info">
+                        <h3>Pack Cepillos de Bambú</h3>
+                        <p class="product-price">$4.50</p>
+                        <div class="card-actions">
+                            <a href="#prod-6" class="btn-fav" title="Añadir a Favoritos">❤</a>
+                            <button class="btn btn-add-cart" disabled>Agotado</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="catalog-card p-alimentos p-instock" id="prod-7">
+                    <div class="card-badge in-stock">En Stock</div>
+                    <div class="card-image">
+                        <img src="../img/products/p7.jpg" alt="Té Verde Orgánico">
+                    </div>
+                    <div class="card-info">
+                        <h3>Té Verde en Hojas Orgánico</h3>
+                        <p class="product-price">$9.20</p>
+                        <div class="card-actions">
+                            <a href="#prod-7" class="btn-fav" title="Añadir a Favoritos">❤</a>
+                            <button class="btn btn-add-cart">Añadir</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="catalog-card p-moda p-instock" id="prod-8">
+                    <div class="card-badge in-stock">En Stock</div>
+                    <div class="card-image">
+                        <img src="../img/products/p8.jpg" alt="Morral de Cáñamo">
+                    </div>
+                    <div class="card-info">
+                        <h3>Morral Ecológico de Cáñamo</h3>
+                        <p class="product-price">$45.00</p>
+                        <div class="card-actions">
+                            <a href="#prod-8" class="btn-fav" title="Añadir a Favoritos">❤</a>
+                            <button class="btn btn-add-cart">Añadir</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="catalog-card p-hogar p-instock" id="prod-9">
+                    <div class="card-badge in-stock">En Stock</div>
+                    <div class="card-image">
+                        <img src="../img/products/p9.jpg" alt="Set de Cubiertos de Bambú">
+                    </div>
+                    <div class="card-info">
+                        <h3>Set Cubiertos Portátiles</h3>
+                        <p class="product-price">$7.50</p>
+                        <div class="card-actions">
+                            <a href="#prod-9" class="btn-fav" title="Añadir a Favoritos">❤</a>
+                            <button class="btn btn-add-cart">Añadir</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="catalog-card p-cuidado p-instock" id="prod-10">
+                    <div class="card-badge in-stock">En Stock</div>
+                    <div class="card-image">
+                        <img src="../img/products/p10.jpg" alt="Desodorante Natural">
+                    </div>
+                    <div class="card-info">
+                        <h3>Desodorante Natural de Coco</h3>
+                        <p class="product-price">$8.00</p>
+                        <div class="card-actions">
+                            <a href="#prod-10" class="btn-fav" title="Añadir a Favoritos">❤</a>
+                            <button class="btn btn-add-cart">Añadir</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="catalog-card p-alimentos p-outstock" id="prod-11">
+                    <div class="card-badge out-of-stock">Agotado</div>
+                    <div class="card-image">
+                        <img src="../img/products/p11.jpg" alt="Miel de Abeja Orgánica">
+                    </div>
+                    <div class="card-info">
+                        <h3>Miel Silvestre Orgánica</h3>
+                        <p class="product-price">$11.00</p>
+                        <div class="card-actions">
+                            <a href="#prod-11" class="btn-fav" title="Añadir a Favoritos">❤</a>
+                            <button class="btn btn-add-cart" disabled>Agotado</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="catalog-card p-moda p-outstock" id="prod-12">
+                    <div class="card-badge out-of-stock">Agotado</div>
+                    <div class="card-image">
+                        <img src="../img/products/p12.jpg" alt="Gorra de plástico reciclado">
+                    </div>
+                    <div class="card-info">
+                        <h3>Gorra de Poliéster Reciclado</h3>
+                        <p class="product-price">$19.99</p>
+                        <div class="card-actions">
+                            <a href="#prod-12" class="btn-fav" title="Añadir a Favoritos">❤</a>
+                            <button class="btn btn-add-cart" disabled>Agotado</button>
+                        </div>
+                    </div>
+                </article>
+
+            </section>
+
         </main>
     </div>
 
     <footer class="main-footer">
         <div class="footer-bottom"><p>&copy; 2026 EcoMarket. Todos los derechos reservados.</p></div>
     </footer>
-
+</div>
 </body>
 </html>

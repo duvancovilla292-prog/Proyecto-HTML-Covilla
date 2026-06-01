@@ -1,0 +1,233 @@
+
+.main-header {
+    background-color: var(--light);
+    padding: 1rem 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo a {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary-dark);
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.main-nav a {
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover, 
+.main-nav a.active {
+    color: var(--primary-dark);
+}
+
+.header-actions {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.2rem;
+}
+
+.hero-section {
+    background: linear-gradient(rgba(44, 62, 80, 0.5), rgba(44, 62, 80, 0.5)), url('../img/hero/bd.jpeg') no-repeat center center/cover;
+    background-color: var(--primary-dark); 
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--light);
+    padding: 0 1rem;
+}
+
+.hero-content h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+
+.products-grid-home,
+.products-catalog-grid {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.catalog-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-content-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.about-story-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.principles-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.main-footer {
+    background-color: var(--dark);
+    color: var(--gray-light);
+    padding: 3rem 5% 1rem 5%;
+    margin-top: 4rem;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 2rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+@media (min-width: 600px) {
+    .products-grid-home,
+    .products-catalog-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    
+    .principles-list {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .principle-item {
+        flex: 1;
+    }
+}
+
+@media (min-width: 992px) {
+    .main-header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1.5rem 5%;
+    }
+
+    .hero-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .products-grid-home {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+
+    .products-catalog-grid {
+        grid-template-columns: repeat(4, 1fr); 
+    }
+
+    .catalog-container {
+        flex-direction: row;
+    }
+
+    .sidebar-filters {
+        width: 250px;
+        position: sticky;
+        top: 100px;
+        height: fit-content;
+    }
+
+    .catalog-main {
+        flex: 1;
+    }
+
+    .about-story-section,
+    .contact-content-layout {
+        flex-direction: row;
+    }
+
+    .story-image, .story-text,
+    .contact-form-block, .contact-info-block {
+        flex: 1;
+    }
+
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.filter-switch {
+    display: none;
+}
+
+.lbl-filter {
+    cursor: pointer;
+    display: inline-block;
+    padding: 4px ;
+    border: black solid 1px;
+    border-radius: 20px;
+    background-color: aliceblue;
+}
+
+#f-hogar:checked ~ .catalog-main .catalog-card,
+#f-moda:checked ~ .catalog-main .catalog-card,
+#f-cuidado:checked ~ .catalog-main .catalog-card,
+#f-alimentos:checked ~ .catalog-main .catalog-card {
+    display: none;
+}
+#f-hogar:checked ~ .catalog-main .p-hogar {
+    display: block;
+}
+#f-moda:checked ~ .catalog-main .p-moda {
+    display: block;
+}
+#f-cuidado:checked ~ .catalog-main .p-cuidado {
+    display: block;
+}
+#f-alimentos:checked ~ .catalog-main .p-alimentos {
+    display: block;
+}
+
+#f-instock:checked ~ .catalog-main .p-outstock {
+    display: none !important;
+}
+
+#f-hogar:checked ~ .sidebar-filters [for="f-hogar"],
+#f-moda:checked ~ .sidebar-filters [for="f-moda"],
+#f-cuidado:checked ~ .sidebar-filters [for="f-cuidado"],
+#f-alimentos:checked ~ .sidebar-filters [for="f-alimentos"],
+#f-instock:checked ~ .sidebar-filters [for="f-instock"]{
+    font-weight: bold;
+    color: #ffffff; 
+    background-color: #2b7a78;
+}

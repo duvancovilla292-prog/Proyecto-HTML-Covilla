@@ -1,0 +1,52 @@
+
+.product-card, .catalog-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover, .catalog-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(44, 62, 80, 0.1);
+}
+
+.btn, .main-nav a, .btn-fav {
+    transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+    filter: brightness(1.1);
+}
+
+.social-icon-scale, .social-icons a {
+    display: inline-block;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    padding: 4px;
+    margin-right: 5px;
+    border: black double ;
+    border-radius: 20px;
+}
+
+.social-icon-scale:hover, .social-icons a:hover {
+    transform: scale(1.2);
+    color: var(--primary);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.hero-content {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+
+.testimonial-card {
+    transition: opacity 0.5s ease;
+}
