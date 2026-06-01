@@ -1,52 +1,68 @@
-
-.product-card, .catalog-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.tarjeta-producto,
+.tarjeta-catalogo {
+    transition: transform .3s ease, box-shadow .3s ease;
 }
 
-.product-card:hover, .catalog-card:hover {
+.tarjeta-producto:hover,
+.tarjeta-catalogo:hover {
     transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(44, 62, 80, 0.1);
+    box-shadow: 0 10px 20px rgba(44, 62, 80, .1);
 }
 
-.btn, .main-nav a, .btn-fav {
-    transition: all 0.2s ease-in-out;
+.boton,
+.navegacion-principal a,
+.boton-favorito,
+.punto-control,
+.etiqueta-filtro {
+    transition: all .2rem ease-in-out;
 }
 
-.btn:hover {
+.boton:hover {
     filter: brightness(1.1);
 }
 
-.social-icon-scale, .social-icons a {
+.navegacion-principal a:hover,
+.navegacion-principal a.active {
+    color: var(--primario-oscuro);
+}
+
+.diapositivas-testimonios {
+    transition: transform .5s ease-in-out;
+}
+
+.tarjeta-testimonio {
+    transition: opacity .5s ease;
+}
+
+.escala-icono-social,
+.iconos-sociales a {
     display: inline-block;
-    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    padding: 4px;
+    transition: transform .3s cubic-bezier(.175, .885, .32, 1.275), color .2s ease;
+    padding: 4px 8px;
     margin-right: 5px;
-    border: black double ;
+    border: 2px double var(--oscuro);
     border-radius: 20px;
 }
 
-.social-icon-scale:hover, .social-icons a:hover {
+.escala-icono-social:hover,
+.iconos-sociales a:hover {
     transform: scale(1.2);
-    color: var(--primary);
+    color: var(--primario);
+    border-color: var(--primario);
 }
 
-@keyframes fadeInUp {
+@keyframes entradaHaciaArriba {
     from {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-
-.hero-content {
-    animation: fadeInUp 0.8s ease-out forwards;
-}
-
-
-.testimonial-card {
-    transition: opacity 0.5s ease;
+.contenido-hero {
+    animation: entradaHaciaArriba .8s ease-out forwards;
 }

@@ -10,76 +10,66 @@
     <link rel="stylesheet" href="../css/animations.css">
 </head>
 <body>
-    <div class="algo">
-    <header class="main-header">
-        <div class="logo"><a href="../index.html">EcoMarket</a></div>
-        <nav class="main-nav">
+<div class="contenedor-borde">
+    <header class="encabezado-principal">
+        <div class="logotipo"><a href="../index.html">EcoMarket</a></div>
+        <nav class="navegacion-principal">
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="productos.html">Productos</a></li>
                 <li><a href="sobre-nosotros.html">Nosotros</a></li>
-                <li><a href="contacto.html" class="active">Contacto</a></li>
+                <li><a href="contacto.html" class="activo">Contacto</a></li>
             </ul>
         </nav>
-        <div class="header-actions">
-            <a href="#search">🔍</a>
-            <a href="#cart">🛒 <span class="cart-count">0</span></a>
+        <div class="acciones-encabezado">
+            <a href="#buscar">🔍</a>
+            <a href="#carrito">🛒 <span class="contador-carrito">0</span></a>
         </div>
     </header>
-
-    <main class="contact-page-container container">
-        <section class="contact-content-layout">
-            
-            <div class="contact-form-block">
+    <main class="contenedor-pagina-contacto contenedor">
+        <section class="disposicion-contenido-contacto">
+            <div class="bloque-formulario-contacto">
                 <h2>Escríbenos</h2>
                 <p>¿Tienes dudas o propuestas de colaboración? Envíanos un mensaje.</p>
-                
-                <form class="intelligent-form" action="#" method="POST">
-                    <div class="form-group">
-                        <label for="username">Nombre Completo</label>
-                        <input type="text" id="username" name="username" placeholder="Tu nombre" required>
-                        <span class="validation-msg"></span>
+                <form class="formulario-inteligente" action="#" method="POST">
+                    <div class="grupo-formulario">
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required pattern="[A-Za-aCcCcEeIiOoUuNn ]{3,50}">
+                        <span class="mensaje-validacion"></span>
                     </div>
-
-                    <div class="form-group">
-                        <label for="email">Correo Electrónico</label>
-                        <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
-                        <span class="validation-msg"></span>
+                    <div class="grupo-formulario">
+                        <label for="correo">Correo Electrónico</label>
+                        <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+                        <span class="mensaje-validacion"></span>
                     </div>
-
-                    <div class="form-group">
-                        <label for="message">Mensaje</label>
-                        <textarea id="message" name="message" rows="5" placeholder="¿En qué te podemos ayudar?" required></textarea>
-                        <span class="validation-msg"></span>
+                    <div class="grupo-formulario">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" placeholder="¿En qué te podemos ayudar?" required></textarea>
+                        <span class="mensaje-validacion"></span>
                     </div>
-
-                    <button type="submit" class="btn btn-submit">Enviar Mensaje</button>
+                    <button type="submit" class="boton boton-enviar">Enviar Mensaje</button>
                 </form>
             </div>
-
-            <div class="contact-info-block">
+            <div class="bloque-informacion-contacto">
                 <h2>Nuestra Ubicación</h2>
-                <div class="map-wrapper">
-                    <img src="../img/hero/l.jpeg" alt="Mapa de ubicación de la tienda principal de EcoMarket" class="static-map">
+                <div class="envoltura-mapa">
+                    <img src="../img/hero/l.jpeg" alt="Mapa de ubicación de la tienda principal de EcoMarket" class="mapa-estatico">
                 </div>
-
-                <div class="social-networks-block">
+                <div class="bloque-redes-sociales">
                     <h3>Conéctate en Redes</h3>
                     <p>Respondemos de inmediato por aquí:</p>
-                    <div class="animated-social-icons">
-                        <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon-scale">Instagram</a>
-                        <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon-scale">Facebook</a>
-                        <a href="https://twitter.com" target="_blank" rel="noopener" class="social-icon-scale">Twitter</a>
+                    <div class="iconos-sociales-animados">
+                        <a href="https://instagram.com" target="_blank" rel="noopener" class="escala-icono-social">Instagram</a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener" class="escala-icono-social">Facebook</a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener" class="escala-icono-social">Twitter</a>
                     </div>
                 </div>
             </div>
-
         </section>
     </main>
-
-    <footer class="main-footer">
-        <div class="footer-bottom"><p>&copy; 2026 EcoMarket. Todos los derechos reservados.</p></div>
+    <footer class="pie-principal">
+        <div class="base-pie"><p>&copy; 2026 EcoMarket. Todos los derechos reservados.</p></div>
     </footer>
-    </div>
+</div>
 </body>
 </html>

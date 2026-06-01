@@ -10,136 +10,101 @@
     <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
-<div class="algo">
-    <header class="main-header">
-        <div class="logo">
+<div class="contenedor-borde">
+    <header class="encabezado-principal">
+        <div class="logotipo">
             <a href="index.html">EcoMarket</a>
         </div>
-        <nav class="main-nav">
+        <nav class="navegacion-principal">
             <ul>
-                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="index.html" class="activo">Inicio</a></li>
                 <li><a href="views/productos.html">Productos</a></li>
                 <li><a href="views/sobre-nosotros.html">Nosotros</a></li>
                 <li><a href="views/contacto.html">Contacto</a></li>
             </ul>
         </nav>
-        <div class="header-actions">
-            <a href="#search" class="icon-search" aria-label="Buscar">🔍</a>
-            <a href="#cart" class="icon-cart" aria-label="Carrito">🛒 <span class="cart-count">0</span></a>
+        <div class="acciones-encabezado">
+            <a href="#buscar" class="icono-buscar" aria-label="Buscar">🔍</a>
+            <a href="#carrito" class="icono-carrito" aria-label="Carrito">🛒 <span class="contador-carrito">0</span></a>
         </div>
     </header>
-
     <main>
-        <section class="hero-section">
-            <div class="hero-content">
+        <section class="seccion-hero">
+            <div class="contenido-hero">
                 <h1>Compra responsable, vive sostenible</h1>
-                <p>Descubre nuestra selección exclusiva de productos 100% ecológicos, reutilizables y sustentables.</p>
-                <a href="views/productos.html" class="btn btn-primary">Explorar productos</a>
+                <p>Descubre nuestra selección de productos ecológicos y biodegradables para el día a día.</p>
+                <div class="botones-hero">
+                    <a href="views/productos.html" class="boton boton-principal">Explorar Tienda</a>
+                    <a href="views/sobre-nosotros.html" class="boton boton-secundario">Saber Más</a>
+                </div>
             </div>
         </section>
-
-        <section class="featured-products container">
-            <h2>Productos Destacados</h2>
-            <div class="products-grid-home">
-                
-                <article class="product-card">
-                    <div class="card-image">
-                        <img src="img/products/image1.jpeg" alt="Cepillo de dientes de bambú">
+        <section class="productos-destacados contenedor">
+            <h2 class="titulo-seccion">Productos Destacados</h2>
+            <div class="rejilla-productos-inicio">
+                <article class="tarjeta-producto">
+                    <div class="imagen-tarjeta">
+                        <img src="img/products/image1.jpeg" alt="Botella Térmica de Acero Inoxidable">
                     </div>
-                    <div class="card-content">
-                        <h3>Cepillo de Bambú</h3>
-                        <p>Biodegradable, cerdas suaves de carbón activo para un cuidado natural.</p>
-                        <a href="views/productos.html" class="btn btn-secondary">Ver más</a>
-                    </div>
-                </article>
-
-                <article class="product-card">
-                    <div class="card-image">
-                        <img src="img/products/imagen2.jpg" alt="Bolsas reutilizables de algodón">
-                    </div>
-                    <div class="card-content">
-                        <h3>Bolsas de Algodón Orgánico</h3>
-                        <p>Pack de 3 bolsas de malla perfectas para tus compras de frutas y verduras.</p>
-                        <a href="views/productos.html" class="btn btn-secondary">Ver más</a>
-                    </div>
-                </article>
-
-                <article class="product-card">
-                    <div class="card-image">
-                        <img src="img/products/img3.jpg" alt="Botella térmica de acero inoxidable">
-                    </div>
-                    <div class="card-content">
+                    <div class="contenido-tarjeta">
                         <h3>Botella Térmica Eco</h3>
-                        <p>Mantiene tus bebidas frías o calientes y reduce el uso de plástico.</p>
-                        <a href="views/productos.html" class="btn btn-secondary">Ver más</a>
+                        <p class="precio-producto">$24.99</p>
+                        <p>Mantiene tus bebidas frías por 24 horas y calientes por 12 horas. Reduce el plástico.</p>
+                        <a href="views/productos.html" class="boton boton-secundario">Ver más</a>
                     </div>
                 </article>
-
-                <article class="product-card">
-                    <div class="card-image">
-                        <img src="img/products/imagen4.jpg" alt="Envoltorios de cera de abeja">
+                <article class="tarjeta-producto">
+                    <div class="imagen-tarjeta">
+                        <img src="img/products/imagen2.jpg" alt="Bolsas de tela reutilizables para compras">
                     </div>
-                    <div class="card-content">
-                        <h3>Envoltorios de Cera</h3>
-                        <p>Alternativa perfecta al papel film. Lavables, reutilizables y compostables.</p>
-                        <a href="views/productos.html" class="btn btn-secondary">Ver más</a>
-                    </div>
-                </article>
-
-                <article class="product-card">
-                    <div class="card-image">
-                        <img src="img/products/img5.jpg" alt="Pajitas de acero reutilizables">
-                    </div>
-                    <div class="card-content">
-                        <h3>Kit de Pajitas de Acero</h3>
-                        <p>Incluye 4 pajitas de acero inoxidable y un cepillo limpiador de limpieza.</p>
-                        <a href="views/productos.html" class="btn btn-secondary">Ver más</a>
+                    <div class="contenido-tarjeta">
+                        <h3>Pack Bolsas de Algodón</h3>
+                        <p class="precio-producto">$12.50</p>
+                        <p>Tres bolsas de diferentes tamaños hechas de algodón orgánico para tus compras a granel.</p>
+                        <a href="views/productos.html" class="boton boton-secundario">Ver más</a>
                     </div>
                 </article>
-
-                <article class="product-card">
-                    <div class="card-image">
-                        <img src="img/products/img6.jpg" alt="Esponja de luffa natural">
+                <article class="tarjeta-producto">
+                    <div class="imagen-tarjeta">
+                        <img src="img/products/imagen4.jpg" alt="Esponja de luffa natural">
                     </div>
-                    <div class="card-content">
-                        <h3>Esponja de Luffa</h3>
+                    <div class="contenido-tarjeta">
+                        <h3>Esponja de Luffa Natural</h3>
+                        <p class="precio-producto">$4.00</p>
                         <p>Esponja vegetal 100% biodegradable para platos o cuidado corporal.</p>
-                        <a href="views/productos.html" class="btn btn-secondary">Ver más</a>
+                        <a href="views/productos.html" class="boton boton-secundario">Ver más</a>
                     </div>
                 </article>
-
             </div>
         </section>
     </main>
-
-    <footer class="main-footer">
-        <div class="footer-container">
-            <div class="footer-info">
+    <footer class="pie-principal">
+        <div class="contenedor-pie">
+            <div class="informacion-pie">
                 <h3>EcoMarket</h3>
                 <p>Promoviendo un estilo de vida consciente y respetuoso con el medio ambiente.</p>
                 <p>Email: contacto@ecomarket.com</p>
             </div>
-            <div class="footer-links">
+            <div class="enlaces-pie">
                 <h4>Enlaces Legales</h4>
                 <ul>
                     <li><a href="#politicas">Políticas de Privacidad</a></li>
                     <li><a href="#terminos">Términos y Condiciones</a></li>
                 </ul>
             </div>
-            <div class="footer-socials">
+            <div class="redes-pie">
                 <h4>Síguenos</h4>
-                <div class="social-icons">
+                <div class="iconos-sociales">
                     <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
                     <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
                     <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a>
                 </div>
             </div>
         </div>
-        <div class="footer-bottom">
+        <div class="base-pie">
             <p>&copy; 2026 EcoMarket. Todos los derechos reservados.</p>
         </div>
     </footer>
 </div>
-
 </body>
 </html>
