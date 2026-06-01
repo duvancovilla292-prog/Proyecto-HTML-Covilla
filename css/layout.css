@@ -121,19 +121,15 @@
     display: none;
 }
 
-#f-hogar:checked~.principal-catalogo .tarjeta-catalogo,
-#f-moda:checked~.principal-catalogo .tarjeta-catalogo,
-#f-cuidado:checked~.principal-catalogo .tarjeta-catalogo,
-#f-alimentos:checked~.principal-catalogo .tarjeta-catalogo,
-#f-enstock:checked~.principal-catalogo .p-agotado {
-    display: none !important;
+#f-hogar:checked ~ .principal-catalogo .tarjeta-catalogo:not(.p-hogar),
+#f-moda:checked ~ .principal-catalogo .tarjeta-catalogo:not(.p-moda),
+#f-cuidado:checked ~ .principal-catalogo .tarjeta-catalogo:not(.p-cuidado),
+#f-alimentos:checked ~ .principal-catalogo .tarjeta-catalogo:not(.p-alimentos) {
+    display: none;
 }
 
-#f-hogar:checked~.principal-catalogo .p-hogar,
-#f-moda:checked~.principal-catalogo .p-moda,
-#f-cuidado:checked~.principal-catalogo .p-cuidado,
-#f-alimentos:checked~.principal-catalogo .p-alimentos {
-    display: flex;
+#f-enstock:checked ~ .principal-catalogo .p-agotado {
+    display: none;
 }
 
 @media (min-width: 600px) {
