@@ -46,8 +46,7 @@
     background: rgba(46, 204, 113, .02);
 }
 
-.formulario-inteligente input:focus:invalid+.mensaje-validacion::before {
-    content: "✖ Requerido o formato incorrecto";
+.formulario-inteligente input:focus:invalid {
     color: var(--error);
     font-size: .8rem;
     display: block;
