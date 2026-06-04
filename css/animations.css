@@ -6,15 +6,7 @@
 .tarjeta-producto:hover,
 .tarjeta-catalogo:hover {
     transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(44, 62, 80, .1);
-}
-
-.boton,
-.navegacion-principal a,
-.boton-favorito,
-.punto-control,
-.etiqueta-filtro {
-    transition: all .2rem ease-in-out;
+    box-shadow: 0 10px 20px rgb(44, 62, 80);
 }
 
 .boton:hover {
@@ -24,14 +16,6 @@
 .navegacion-principal a:hover,
 .navegacion-principal a.active {
     color: var(--primario-oscuro);
-}
-
-.diapositivas-testimonios {
-    transition: transform .5s ease-in-out;
-}
-
-.tarjeta-testimonio {
-    transition: opacity .5s ease;
 }
 
 .escala-icono-social,
@@ -64,5 +48,5 @@
 }
 
 .contenido-hero {
-    animation: entradaHaciaArriba .8s ease-out forwards;
+    animation: entradaHaciaArriba 1s;
 }
