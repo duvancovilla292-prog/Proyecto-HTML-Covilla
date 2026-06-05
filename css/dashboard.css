@@ -1,0 +1,27 @@
+.grid-dashboard {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 15px;
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+.tarjeta-metrica {
+    background: #eef0f2; 
+    padding: 1.5rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid #dcdcdc;
+}
+
+.tarjeta-metrica img {
+    width: 50px;
+    height: 50px;
+}
+
+.tarjeta-metrica h3 {
+    margin: 0;
+    color: #4a5568;
+}

@@ -1,0 +1,25 @@
+
+.banner-flash {
+    background: var(--primario);
+    color: rgb(255, 255, 255);
+    padding: 3rem 1rem;
+    text-align: center;
+    border-bottom: 5px solid #00ff40;
+    border-radius: 20px;
+}
+
+.contenido-banner h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.temporizador {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 1.5rem 0;
+    font-family: monospace;
+    background: rgba(0,0,0,0.2);
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
