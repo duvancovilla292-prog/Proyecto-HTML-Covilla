@@ -14,33 +14,35 @@
 
 .articulo {
     display: flex; 
+    align-items: center;
     flex-direction: row;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     transition: transform 0.3s ease;
-    background: #56fc95;
+    background: #58fc97;
 }
 
+.articulo div {
+    width: 60%;
+}
 .articulo img {
-    width: 35%; 
-    height: 250px;
+    margin-left: 10px;
+    width: 40%; 
+    height: 100%;
     border-radius: 20px;
     object-fit: cover;
 }
 
-.articulo-contenido {
-    width: 65%; 
-    padding: 1.5rem;
-}
-
-.articulo h2 {
+.articulo h3 {
+    margin-bottom: 10px;
     font-family: 'Georgia', serif; 
-    padding: 100px;
+    padding: 10px;
 }
 
 .articulo p {
     line-height: 1.6; 
     color: #444;
+    padding: 10px;
 }
 
 .articulo:hover {
