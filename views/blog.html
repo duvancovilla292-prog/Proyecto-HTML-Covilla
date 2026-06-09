@@ -2,40 +2,58 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Blog | Vida Sostenible</title>
-    <link rel="stylesheet" href="../css/main.css">
+    <title>Blog Vida Sostenible</title>
     <link rel="stylesheet" href="../css/blog.css">
-    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/animations.css">
 </head>
 <body>
-    <div class="contenedor-borde">
-    <header class="blog-header">
-        <h1>Vida Sostenible</h1>
-        <p>Tu guía diaria para un impacto positivo en el planeta.</p>
+    <div class="contenedor-borde ">
+    <header class="encabezado-principal blog-header">
+        <div class="logotipo"><a href="../index.html">EcoMarket</a></div>
+        <nav class="navegacion-principal">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="sobre-nosotros.html" class="activo">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+        <div class="acciones-encabezado">
+            <a href="#buscar">🔍</a>
+            <a href="#carrito">🛒 <span class="contador-carrito">0</span></a>
+        </div>
+        
     </header>
 
     <main class="grid-blog">
-        <article class="articulo principal">
-            <img src="../assets/energia-limpia.jpg" alt="Energía Limpia">
-            <h2>El futuro de la energía limpia: ¿Estamos listos?</h2>
+        <div class="encabezado-secundario">
+            <h1>Vida Sostenible</h1>
+            <p>Tu guía diaria para un impacto positivo en el planeta.</p>
+        </div>
+        <article class="articulo" >
+            <img src="../img/hero/energia.jpg" alt="Energía Limpia">
+            <h3>El futuro de la energía limpia: ¿Estamos listos?</h3>
             <p>Un análisis profundo sobre cómo las renovables están transformando el consumo eléctrico en nuestros hogares...</p>
         </article>
 
         <article class="articulo">
-            <img src="../assets/reciclaje.jpg" alt="Reciclaje">
+            <img src="../img/hero/images.jpeg" alt="Reciclaje">
             <h3>Guía básica de reciclaje</h3>
             <p>Aprende a separar tus residuos correctamente y reduce tu huella de basura diaria.</p>
         </article>
 
-        <article class="articulo">
-            <img src="../assets/habitoss-verdes.jpg" alt="Hábitos">
+        <article class="articulo" >
+            <img src="../img/hero/salud.jpg" alt="Hábitos">
             <h3>Hábitos verdes para el 2026</h3>
             <p>Pequeños cambios en tu rutina diaria que generan grandes beneficios ambientales.</p>
         </article>
         <article class="articulo">
-            <img src="../assets/habitoss-verdes.jpg" alt="Hábitos">
-            <h3>Hábitos verdes para el 2026</h3>
-            <p>Pequeños cambios en tu rutina diaria que generan grandes beneficios ambientales.</p>
+            <img src="../img/hero/enrgialimpia.jpg" alt="Alternativas">
+            <h3>Mejores Alternativas limpias</h3>
+            <p>Hay diversas alternativas limpias para casi cualquier cosa como de energia, utencilios y hasta metodos de fabricacion.</p>
         </article>
     </main>
     </div>

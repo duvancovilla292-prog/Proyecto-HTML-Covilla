@@ -13,6 +13,7 @@
     gap: 1rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, .05);
     position: sticky;
+    border-radius: 20px;
     top: 0;
     z-index: 100;
 }
